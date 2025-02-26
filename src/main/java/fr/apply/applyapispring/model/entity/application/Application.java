@@ -1,10 +1,10 @@
-package fr.apply.applyapispring.models.entities.application;
+package fr.apply.applyapispring.model.entity.application;
 
 import fr.apply.applyapispring.enums.ApplicationStatus;
 import fr.apply.applyapispring.enums.RecruiterResponse;
-import fr.apply.applyapispring.models.entities.company.Company;
-import fr.apply.applyapispring.models.entities.sector.Sector;
-import fr.apply.applyapispring.models.entities.user.User;
+import fr.apply.applyapispring.model.entity.company.Company;
+import fr.apply.applyapispring.model.entity.sector.Sector;
+import fr.apply.applyapispring.model.entity.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

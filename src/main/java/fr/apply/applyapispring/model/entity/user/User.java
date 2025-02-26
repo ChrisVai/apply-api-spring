@@ -1,33 +1,42 @@
-package fr.apply.applyapispring.models.entities.sector;
+package fr.apply.applyapispring.model.entity.user;
 
-import fr.apply.applyapispring.models.entities.application.Application;
+import fr.apply.applyapispring.enums.Role;
+import fr.apply.applyapispring.model.entity.application.Application;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 
+
 import java.util.ArrayList;
 import java.util.List;
+
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @DynamicUpdate
-@Table(name = "sector")
-public class Sector {
+@Table(name = "user")
+public class User {
 
-    @Id
+    @Id()
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(nullable = false)
-    private String name;
+    private String firstName;
+
+    private String lastName;
+
+    private String email;
+
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @OneToMany(
-            mappedBy = "sector",
+            mappedBy = "user",
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )

@@ -1,6 +1,6 @@
-package fr.apply.applyapispring.models.entities.recruiter;
+package fr.apply.applyapispring.model.entity.recruiter;
 
-import fr.apply.applyapispring.models.entities.company.Company;
+import fr.apply.applyapispring.model.entity.company.Company;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
